@@ -22,7 +22,7 @@ Several integration tests are being skipped because they rely on a shared fixtur
 **Reproduction summary:**
 Ran `make setup` and confirmed `tests/fixtures/sample_profiles/basic_profile.json` (and the whole `tests/fixtures/` directory) does not exist in the repo, on this branch or on upstream `main`/`cohort/su26-start`. Added `tests/integration/test_sample_profile_fixture.py`, which fails with `FileNotFoundError` on the missing fixture path, documenting the reproduction.
 
-**PLAN.md link:** [link to PLAN.md in your fork]
+**PLAN.md link:** https://github.com/VSilva0806/pathreview/blob/61309a693f56236555394c7a041cddb27d9883b2/PLAN.md
 
 **Walkthrough video (recommended):** [link to your Loom video, ≤2 min — recommended, not graded]
 
