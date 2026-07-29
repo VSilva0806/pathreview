@@ -17,7 +17,7 @@ Several integration tests are being skipped because they rely on a shared fixtur
 
 ## Week 8 — Reproduction & solution planning
 
-**Reproduction commit link:** [link to commit documenting the reproduced issue]
+**Reproduction commit link:** https://github.com/VSilva0806/pathreview/commit/f003caad0015b7baec669ff54867b70e7e62b894
 
 **Reproduction summary:**
 Ran `make setup` and confirmed `tests/fixtures/sample_profiles/basic_profile.json` (and the whole `tests/fixtures/` directory) does not exist in the repo, on this branch or on upstream `main`/`cohort/su26-start`. Added `tests/integration/test_sample_profile_fixture.py`, which fails with `FileNotFoundError` on the missing fixture path, documenting the reproduction.
