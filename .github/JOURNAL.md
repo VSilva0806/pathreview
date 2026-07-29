@@ -24,7 +24,5 @@ Ran `make setup` and confirmed `tests/fixtures/sample_profiles/basic_profile.jso
 
 **PLAN.md link:** https://github.com/VSilva0806/pathreview/blob/61309a693f56236555394c7a041cddb27d9883b2/PLAN.md
 
-**Walkthrough video (recommended):** [link to your Loom video, ≤2 min — recommended, not graded]
-
 **Blockers or open questions:**
-[Anything you're still uncertain about going into Week 9, or leave blank]
+Not 100% sure yet what exact JSON shape the ingestion code expects for the fixture — need to check `ingestion/pipeline.py` more closely before finalizing field names. Also, the original "integration tests" the issue refers to don't actually exist in the repo yet, so I'll be writing new ones alongside the fixture rather than just unskipping old ones.
