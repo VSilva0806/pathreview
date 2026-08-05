@@ -12,10 +12,7 @@ from pathlib import Path
 import pytest
 
 FIXTURE_PATH = (
-    Path(__file__).resolve().parent.parent
-    / "fixtures"
-    / "sample_profiles"
-    / "basic_profile.json"
+    Path(__file__).resolve().parent.parent / "fixtures" / "sample_profiles" / "basic_profile.json"
 )
 
 
@@ -30,10 +27,15 @@ def test_basic_profile_fixture_exists():
 
 @pytest.mark.integration
 def test_basic_profile_fixture_has_expected_shape():
-    """Once restored, the fixture should contain a username, resume, and two repos."""
+    """The fixture's profile fields should match core.models.profile.Profile, plus two repos."""
     data = json.loads(FIXTURE_PATH.read_text())
 
+    # Fields matching core.models.profile.Profile
     assert "github_username" in data
-    assert "resume" in data
+    assert "resume_filename" in data
+    assert "resume_text" in data
+    assert "portfolio_url" in data
+
+    # Repositories used to exercise ingestion of repo metadata
     assert "repositories" in data
     assert len(data["repositories"]) == 2

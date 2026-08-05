@@ -1,0 +1,38 @@
+{
+  "github_username": "janedoe-dev",
+  "portfolio_url": "https://janedoe.dev",
+  "resume_filename": "jane_doe_resume.md",
+  "resume_text": "# Jane Doe\nBackend engineer with 5 years of experience building distributed systems in Python and Go.\n\n## Summary\nPragmatic backend engineer focused on reliability, developer tooling, and API design. Enjoys mentoring and writing clear documentation.\n\n## Experience\n\n### Senior Software Engineer, Northwind Systems (2022 - Present)\n- Led migration of a monolithic order-processing service to a set of async Python microservices, cutting P99 latency by 40%.\n- Designed the internal RBAC library adopted across 12 services.\n- Mentored two junior engineers through onboarding and their first on-call rotations.\n\n### Software Engineer, Brightloop Analytics (2019 - 2022)\n- Built a streaming ETL pipeline (Kafka + Go) processing 2M events/day.\n- Owned the public REST API, including versioning strategy and OpenAPI docs.\n- Reduced CI pipeline runtime from 22 minutes to 7 minutes by parallelizing test suites.\n\n## Skills\n- Languages: Python, Go, TypeScript, SQL\n- Infrastructure: Docker, Kubernetes, Terraform, AWS (ECS, RDS, S3)\n- Practices: TDD, code review, incident response, API design\n\n## Education\n\n### B.S. in Computer Science, University of Washington (2015 - 2019)\n- Focus in distributed systems and databases.\n\n## Projects\n- pathreview-cli: a command-line tool for linting internal API contracts.\n- ledger-sim: a toy double-entry ledger used for teaching transaction consistency.\n",
+  "repositories": [
+    {
+      "name": "async-order-service",
+      "full_name": "janedoe-dev/async-order-service",
+      "description": "Async Python microservice for order processing, built on FastAPI and Postgres.",
+      "html_url": "https://github.com/janedoe-dev/async-order-service",
+      "language": "Python",
+      "stargazers_count": 142,
+      "forks_count": 18,
+      "open_issues_count": 6,
+      "pushed_at": "2026-06-12T09:41:00Z",
+      "topics": ["fastapi", "asyncio", "postgres", "microservices"],
+      "homepage": "",
+      "readme_content": "# async-order-service\n\nAsync order-processing microservice.\n\n## Setup\n\n```bash\npip install -r requirements.txt\npytest\n```\n",
+      "file_structure": "async-order-service/\n  app/\n    main.py\n    models.py\n  tests/\n    test_orders.py\n  .github/workflows/ci.yml\n  requirements.txt\n  Dockerfile\n"
+    },
+    {
+      "name": "kafka-etl-pipeline",
+      "full_name": "janedoe-dev/kafka-etl-pipeline",
+      "description": "Streaming ETL pipeline in Go that ingests Kafka events into a data warehouse.",
+      "html_url": "https://github.com/janedoe-dev/kafka-etl-pipeline",
+      "language": "Go",
+      "stargazers_count": 87,
+      "forks_count": 9,
+      "open_issues_count": 3,
+      "pushed_at": "2026-05-02T15:20:00Z",
+      "topics": ["kafka", "etl", "go", "data-engineering"],
+      "homepage": "",
+      "readme_content": "# kafka-etl-pipeline\n\nStreaming ETL pipeline for warehouse ingestion.\n\n## Testing\n\n```bash\ngo test ./...\n```\n",
+      "file_structure": "kafka-etl-pipeline/\n  cmd/\n    consumer/\n      main.go\n  internal/\n    transform/\n  go.mod\n  go.sum\n  .circleci/config.yml\n"
+    }
+  ]
+}
