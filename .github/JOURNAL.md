@@ -44,16 +44,16 @@ None on this issue specifically — `make check`/full suite turned up a pre-exis
 
 ### Check-in 2 (end of week)
 
-**PR link:** [link to your submitted pull request]
+**PR link:** https://github.com/VSilva0806/pathreview/pull/1
 
-**Branch:** [the branch name you worked on, e.g. `fix/123-short-description`]
+**Branch:** test/106-sample-user-profile-fixture
 
 **What you built:**
-[1–3 sentences summarizing what your fix does and how it works]
+Restored `tests/fixtures/sample_profiles/basic_profile.json`, shaped to match the real `Profile` model fields with a realistic GitHub username, markdown resume, and two distinct repositories. Added an integration test that runs the fixture through the actual `IngestionPipeline` to confirm the resume and both repos parse and embed correctly.
 
 **Tests added or updated:**
-[Which test files did you touch? What do they cover?]
+Updated `tests/integration/test_sample_profile_fixture.py` to assert the fixture's real shape instead of just checking existence, and added `tests/integration/test_profile_ingestion.py` to exercise `ingest_resume` and `ingest_repo_metadata` against it.
 
-**Self-review confirmation:** [ ] make check passes  [ ] make test-unit passes
+**Self-review confirmation:** [x] make check passes  [x] make test-unit passes
 
-**Draft PR feedback received from:** [name or Slack handle, or "none"]
+**Draft PR feedback received from:** None
