@@ -26,3 +26,34 @@ Ran `make setup` and confirmed `tests/fixtures/sample_profiles/basic_profile.jso
 
 **Blockers or open questions:**
 Not 100% sure yet what exact JSON shape the ingestion code expects for the fixture — need to check `ingestion/pipeline.py` more closely before finalizing field names. Also, the original "integration tests" the issue refers to don't actually exist in the repo yet, so I'll be writing new ones alongside the fixture rather than just unskipping old ones.
+
+## Week 9 — Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:**
+Restored `basic_profile.json`, shaped to match the real `Profile` model fields (`github_username`, `resume_text`, etc.) rather than arbitrary keys, and updated the reproduction test to assert against that shape. Also wrote a new integration test that runs the fixture through the actual ingestion pipeline to confirm the resume and both repos parse correctly. That covers steps 1–4 from PLAN.md.
+
+**Next steps:**
+Run the full test suite and `make check` to confirm nothing else depended on the old fixture shape and that lint/format/typecheck stay clean, then write up and open the PR.
+
+**Blockers:**
+None on this issue specifically — `make check`/full suite turned up a pre-existing backlog of ~53 unrelated failing tests elsewhere in the repo, but confirmed those predate this branch and aren't caused by this change.
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:** [link to your submitted pull request]
+
+**Branch:** [the branch name you worked on, e.g. `fix/123-short-description`]
+
+**What you built:**
+[1–3 sentences summarizing what your fix does and how it works]
+
+**Tests added or updated:**
+[Which test files did you touch? What do they cover?]
+
+**Self-review confirmation:** [ ] make check passes  [ ] make test-unit passes
+
+**Draft PR feedback received from:** [name or Slack handle, or "none"]
