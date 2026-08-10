@@ -57,3 +57,20 @@ Updated `tests/integration/test_sample_profile_fixture.py` to assert the fixture
 **Self-review confirmation:** [x] make check passes  [x] make test-unit passes
 
 **Draft PR feedback received from:** None
+
+### Reflection
+
+**What was harder than you expected?**
+Figuring out the fixture's exact JSON shape was harder than expected — the issue referenced tests and fields that no longer existed, so I had to reverse-engineer the shape from the `Profile` model instead of copying an existing pattern.
+
+**What did you learn about working in a large codebase?**
+I learned to verify assumptions against the actual model/pipeline code rather than trusting what an issue description implies exists, since the "integration tests" it referenced turned out not to be there at all.
+
+**How did AI tools help — and where did they fall short?**
+AI was most useful for quickly tracing how fixture fields flow through the ingestion pipeline and drafting the fixture/tests; I still had to manually verify field names against the real model code before trusting the output.
+
+**What would you do differently if you started over?**
+I'd check `ingestion/pipeline.py` and the model definitions before writing the reproduction test, so the first version already targets the real fixture shape instead of needing a follow-up revision.
+
+**What are you most proud of from this module?**
+I am proud of contributing to a repo for the first time.
